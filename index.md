@@ -3,7 +3,7 @@
 ## Week 3 (Oct 24)
 
 + The data set I am propose to use in my project is Forbes Top 2000 worldwide company list. [Here](files/R_week2.html) is the data and my initial exploratory data analysis on it.
-+ We decided on the groups. Our group name is **datING** and other members are Bilge Uzuner and Türkan Sevgili.
++ We decided on the groups. Our group name is **"datING"** and other members are Bilge Uzuner and Türkan Sevgili.
 
 ### Udacity Update 
 I finished Lesson 4 on the Udacity course. I did all the work required and all the quizes. 
