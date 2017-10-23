@@ -1,0 +1,53 @@
+---
+title: "R_hw2_sefa_erbas"
+author: "Sefa Erbas"
+date: "21 Ekim 2017"
+output: html_document
+---
+
+
+
+``` {r}
+df <- read.csv(file="C:/Users/serba/Desktop/Forbes2017.csv", header=TRUE, sep=",")
+
+table(df$country.status)
+
+#Column names of "Forbes_top_2000_list"
+names(df)
+
+# Summary of "Forbes_top_2000_list" structure
+str(df)
+
+library(dplyr)#glimpse function
+
+#Nature of rows and columns
+glimpse(df)
+
+#Row and coloumn number of "Forbes_top_2000_list"
+dim(df)
+
+#How much money has been gined by the most profitable company?
+max(df$Profits, na.rm = FALSE)
+
+#How many country has been placed and how many times in the top 2000 list?
+q1= df %>%group_by(Country) %>% 
+  summarise(country_int=n())
+
+q1
+
+library(ggplot2)
+
+#Which sector is the most successful in which country?
+ggplot(data = df, aes(x = Sector, y = Country)) + 
+  geom_point() 
+
+
+#How many country have 10/more than 10 company?
+q2 = df %>%group_by(Country) %>% 
+  summarise(country_int=n())%>% 
+  filter(country_int>=10) %>% 
+  arrange(desc(country_int)) 
+
+q2
+
+```
