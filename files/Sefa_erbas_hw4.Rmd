@@ -1,0 +1,52 @@
+---
+title: "Hw4"
+author: "Sefa Erbas"
+date: "26 Kasım 2017"
+output: html_document
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+setwd("C:\\Users\\serba\\Desktop\\R\\Machine Learning")
+yr_data <-
+  read.csv("responses.csv",sep=",")
+
+yr_hi_data <- yr_data %>% select(History:Pets)
+
+yr_hi_data[is.na(yr_hi_data) ] <- 0
+
+print(head(yr_hi_data))
+
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+
+yr_dist <- 1 - cor(yr_hi_data)
+#Apply MDS
+yr_mds_hi <- cmdscale(yr_dist,k=2)
+#Provide column names
+colnames(yr_mds_hi) <- c("x","y")
+print(yr_mds_hi)
+
+
+knitr::opts_chunk$set(echo = TRUE)
+
+
+```
+
+
+```{r}
+
+#Plot
+ggplot(data.frame(yr_mds_hi),aes(x=x,y=y)) + geom_text(label=rownames(yr_mds_hi),angle=45,size=3)
+
+
+```
+
+
