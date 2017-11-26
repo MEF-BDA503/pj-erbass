@@ -1,5 +1,9 @@
 # The Progress Journal
 
+## Week 5 (Nov 21)
+
++ [Here](files/sefaErbas_hw1.html) is my 5 interesting R examples. 
+
 ## Week 3 (Oct 24)
 
 + The data set I am propose to use in my project is Forbes Top 2000 worldwide company list. [Here](files/R_week2.html) is the data and my initial exploratory data analysis on it.
