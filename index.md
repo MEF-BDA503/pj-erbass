@@ -1,6 +1,6 @@
 # The Progress Journal
 
-## Week 5 (Nov 21)
+## Week 8 (Jan 10)
 + [Here](files/Sefa_erbas_final.pdf) is my final document. 
 
 ## Week 5 (Nov 21)
